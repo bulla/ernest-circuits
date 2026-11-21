@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
+    "types": [],
+    "paths": {
+      "ratsnest": [
+        "./.ratsnest/ratsnest.d.ts"
+      ]
+    }
+  },
+  "include": [
+    "circuits"
+  ]
+}
