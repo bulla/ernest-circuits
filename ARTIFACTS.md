@@ -6,3 +6,4 @@ ADR 0013). The `circuit` skill writes a row when it publishes, and finds a page 
 
 | Circuit | Orientation | Theme | Language | Link | Made from | Published |
 | --- | --- | --- | --- | --- | --- | --- |
+| rgb-buttons | 90 | dark | ru | https://claude.ai/artifact/TzKPTMS4uC32CWQ7DfBcTK | 0a55b05 | 2026-11-21 |
