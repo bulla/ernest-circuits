@@ -1,4 +1,4 @@
-# Ernest's circuits
+# rnest-circuits
 
 Sample circuits built with **[ratsnest](https://github.com/bulla/ratsnest)**, a builder of wiring
 guides for breadboards. Each circuit is one declarative file in [`circuits/`](circuits/), and ratsnest
