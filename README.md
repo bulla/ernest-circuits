@@ -21,15 +21,16 @@ published so far.
 
 ## Make a page
 
-With [ratsnest installed](https://github.com/bulla/ratsnest#get-started), from this folder:
+With [ratsnest installed](https://github.com/bulla/ratsnest#get-started), from this folder. `rnest` is
+a shorter name for `ratsnest`, and the two are synonymous:
 
 ```sh
-ratsnest check
-ratsnest generate circuits/rgb-buttons.ts --orientation 90 --theme dark --language en
+rnest check
+rnest generate circuits/rgb-buttons.ts --orientation 90 --theme dark --language en
 ```
 
 The page is written into `pages/`, named by its four inputs. In Claude Code, the `circuit` skill in
 [`.claude/skills/`](.claude/skills/) adds or changes a circuit, makes its page and publishes it.
 
-ratsnest is still a work in progress. Run `ratsnest update` here to move this project to the latest
+ratsnest is still a work in progress. Run `rnest update` here to move this project to the latest
 ratsnest: it upgrades every circuit to the latest format and checks them.
