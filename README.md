@@ -21,8 +21,8 @@ published so far.
 
 ## Make a page
 
-With [ratsnest installed](https://github.com/bulla/ratsnest#get-started), from this folder. `rnest` is
-a shorter name for `ratsnest`, and the two are synonymous:
+With [ratsnest installed](https://github.com/bulla/ratsnest#get-started), run these from this folder.
+`rnest` is a shorter name for `ratsnest`, and the two are synonymous:
 
 ```sh
 rnest check
