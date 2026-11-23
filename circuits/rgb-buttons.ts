@@ -4,7 +4,8 @@
 import type { Circuit } from "ratsnest";
 
 export default {
-  format: 1,
+  format: 2,
+  setup: { kind: "pico" },
   name: {
     en: "Three buttons and an RGB LED",
     fr: "Trois boutons et une LED RVB",
@@ -14,6 +15,11 @@ export default {
     en: "Three buttons in a row, with red, green and blue caps, and an RGB LED that lights in the colour of the button held. It is an addressable LED, with a controller of its own: it takes its colour as data on GP28 and its power from VBUS, and needs no resistor. It goes on a second breadboard, beside the first.",
     fr: "Trois boutons en rang, avec des capuchons rouge, vert et bleu, et une LED RVB qui s’allume de la couleur du bouton maintenu enfoncé. C’est une LED adressable, avec son propre contrôleur : elle reçoit sa couleur en données sur GP28 et son alimentation de VBUS, et n’a besoin d’aucune résistance. Elle se branche sur une seconde plaque, à côté de la première.",
     ru: "Три кнопки в ряд, с красным, зелёным и синим колпачками, и RGB-светодиод, который загорается цветом нажатой кнопки. Это адресуемый светодиод со своим контроллером: он получает цвет в виде данных по GP28, а питание от VBUS, и резистор ему не нужен. Он ставится на вторую макетную плату, рядом с первой.",
+  },
+  credit: {
+    en: "The Pico 2 W is drawn from its datasheet, adapting the Raspberry Pi Pico 2 W pinout, © Raspberry Pi Ltd, under CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0). This drawing is shared under the same licence. Set in Nunito, under the SIL Open Font License 1.1.",
+    fr: "Le Pico 2 W est dessiné d’après sa fiche technique, en adaptant le brochage du Raspberry Pi Pico 2 W, © Raspberry Pi Ltd, sous licence CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0). Ce dessin est partagé sous la même licence. Composé en Nunito, sous la licence SIL Open Font 1.1.",
+    ru: "Pico 2 W нарисован по его спецификации, на основе распиновки Raspberry Pi Pico 2 W, © Raspberry Pi Ltd, по лицензии CC BY-SA 4.0 (creativecommons.org/licenses/by-sa/4.0). Этот рисунок распространяется по той же лицензии. Шрифт Nunito, по лицензии SIL Open Font License 1.1.",
   },
   leds: [
     {
@@ -96,7 +102,9 @@ export default {
       },
       // By the pin, not the button: three resistors three columns apart, down to the rail, left no
       // room for their value tags, which Russian writes wider (4,7 кОм). GP13's goes the same way.
-      parts: [{ kind: "resistor", ohms: 4700, from: "b18", to: "b14" }],
+      parts: [
+        { kind: "resistor", ohms: 4700, from: "b18", to: "b14" },
+      ],
     },
     {
       title: { en: "BTN2 on GP13", fr: "BTN2 sur GP13", ru: "BTN2 на GP13" },
@@ -256,7 +264,7 @@ while True:
     rgb_led.write()
     sleep(0.02)`,
   },
-  scriptDoes: {
+  test: {
     en: "Hold a button down and the LED lights in its cap's colour: BTN1 red, BTN2 green and BTN3 blue. Let go and it goes out. Press Stop in Thonny to end the script.",
     fr: "Maintenez un bouton enfoncé et la LED s’allume de la couleur de son capuchon : BTN1 en rouge, BTN2 en vert et BTN3 en bleu. Relâchez-le et elle s’éteint. Appuyez sur Arrêter dans Thonny pour terminer le script.",
     ru: "Удерживайте кнопку, и светодиод загорится цветом её колпачка: BTN1 красным, BTN2 зелёным, BTN3 синим. Отпустите её, и он погаснет. Чтобы завершить скрипт, нажмите в Thonny кнопку остановки.",
